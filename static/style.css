@@ -1,0 +1,423 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f8f4;
+    color: #183b32;
+}
+
+.navbar {
+    background: #064e3b;
+    color: white;
+    padding: 10px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.brand img {
+    width: 180px;
+    height: 75px;
+    object-fit: contain;
+    background: white;
+    border-radius: 8px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #f4c542;
+}
+
+.container {
+    width: 86%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    font-size: 32px;
+    color: #064e3b;
+    margin-bottom: 8px;
+}
+
+.page-header p {
+    color: #64748b;
+}
+
+.button {
+    display: inline-block;
+    background: #087f5b;
+    color: white;
+    text-decoration: none;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #065f46;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border-top: 4px solid #0b8f63;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.card-title {
+    font-size: 15px;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.card-value {
+    font-size: 30px;
+    font-weight: 700;
+    color: #064e3b;
+}
+
+.recent-products {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    color: #064e3b;
+}
+
+.section-header a {
+    color: #087f5b;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.section-header a:hover {
+    color: #065f46;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 14px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+    color: #64748b;
+    font-size: 14px;
+    background: #f8fafc;
+}
+
+td {
+    color: #334155;
+}
+
+.product-name {
+    font-weight: 600;
+    color: #064e3b;
+}
+
+.badge {
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.badge.good {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.badge.low {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 50px;
+    color: #6b7280;
+}
+
+.empty-state h3 {
+    margin-bottom: 10px;
+    color: #064e3b;
+}
+
+.empty-state p {
+    margin-bottom: 20px;
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filters input,
+.filters select {
+    padding: 12px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    background: white;
+}
+
+.filters input {
+    flex: 1;
+}
+
+.filters input:focus,
+.filters select:focus {
+    outline: none;
+    border-color: #087f5b;
+}
+
+.table-container {
+    background: white;
+    border-radius: 12px;
+    overflow-x: auto;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.actions {
+    white-space: nowrap;
+}
+
+.action-button {
+    display: inline-block;
+    padding: 6px 9px;
+    margin: 2px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    background: white;
+    color: #374151;
+    text-decoration: none;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background: #f0fdf4;
+}
+
+.action-button.edit {
+    color: #087f5b;
+}
+
+.action-button.delete {
+    color: #dc2626;
+}
+
+.action-button.stock {
+    color: #166534;
+}
+
+.form-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.product-form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #334155;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #087f5b;
+    box-shadow: 0 0 0 3px rgba(8, 127, 91, 0.1);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 6px;
+    color: #64748b;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.cancel-button {
+    display: inline-block;
+    padding: 11px 18px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #374151;
+}
+
+.cancel-button:hover {
+    background: #f1f5f9;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.analytics-section {
+    background: white;
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.analytics-section h2 {
+    color: #064e3b;
+    margin-bottom: 5px;
+}
+
+.analytics-section p {
+    color: #64748b;
+}
+
+.chart-container {
+    position: relative;
+    height: 350px;
+    margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar {
+        padding: 10px 4%;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .brand img {
+        width: 160px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar,
+    .page-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+    .brand img {
+        width: 150px;
+        height: 65px;
+    }
+}
